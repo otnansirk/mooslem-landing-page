@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Bars3Icon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Features from '@/components/features/Features'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -14,7 +15,7 @@ const navigation = [
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  return (
+  return (<>
     <div className="" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
       <header className="absolute inset-x-0 top-0 z-50 container mx-auto">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
@@ -41,8 +42,8 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8 backdrop-blur-xl">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div className="relative isolate px-6 lg:px-8 backdrop-blur-xl">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 h-[100vh]">
           <div className="text-center">
             <h1 className='text-5xl font-bold'>Mooslem° <span className='text-3xl font-normal'>Startpage</span></h1>
             <div className='h-auto my-14'>
@@ -79,5 +80,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <Features />
+  </>
   )
 }
