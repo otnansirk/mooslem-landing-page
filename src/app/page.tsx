@@ -5,6 +5,7 @@ import { Bars3Icon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Features from '@/components/features/Features'
 import Button from '@/components/form/Button'
+import Contact from '@/components/contacts/Contact'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -109,6 +110,7 @@ export default function Home() {
       </div>
     </div>
     <Features />
+    <Contact />
   </>
   )
 }
