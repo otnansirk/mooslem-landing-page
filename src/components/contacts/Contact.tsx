@@ -1,9 +1,11 @@
 import { ChatBubbleLeftRightIcon, HeartIcon } from '@heroicons/react/24/outline'
 import Button from '../form/Button'
+import { DocumentMagnifyingGlassIcon } from '@heroicons/react/16/solid'
+import { DocumentIcon } from '@heroicons/react/24/outline'
 
 export default function Contact() {
     return (
-        <div className="isolate  text-white bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+        <div className="isolate  text-white bg-cover bg-center bg-[#012230]" >
             <div className='backdrop-blur-xl px-6 py-24 sm:py-32 lg:px-8'>
 
                 <div className="mx-auto max-w-2xl sm:text-center">
@@ -18,6 +20,16 @@ export default function Contact() {
                     <Button className=''>
                         <HeartIcon aria-hidden="true" className="size-6" />
                         Github
+                    </Button>
+                </div>
+                <div className="mx-auto max-w-2xl sm:text-center mt-20">
+                    <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Documentation</h2>
+                    <p className="mt-5 text-lg/8 ">{`Learn how to use all features of Mooslem Start Page with ease. Step-by-step guides are available to help you get the most out of the experience—whether you're a beginner or advanced user.`}</p>
+                </div>
+                <div className="flex gap-x-6 justify-center mt-10">
+                    <Button className=''>
+                        <DocumentIcon aria-hidden="true" className="size-6" />
+                        Documentation <span aria-hidden="true">→</span>
                     </Button>
                 </div>
             </div>
