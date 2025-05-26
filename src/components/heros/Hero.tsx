@@ -80,10 +80,14 @@ export default function Hero() {
                                 src="https://www.youtube.com/embed/5LoA9sPiyww" title="Mooslem startpage - Prayer Time" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
 
                             <div className="mt-10 w-[100%] h-full flex items-center justify-center gap-x-6">
-                                <Button>
+                                <Button
+                                    onClick={() => window.open('https://chromewebstore.google.com/detail/mooslem%C2%B0-startpage/kmjfcnegnnljfjlolhpdngigkcgaphdo', '_blank')}
+                                >
                                     <Image src={'/chrome-icon.webp'} alt="Mooslem startpage" width={20} height={20} /> Install Now
                                 </Button>
-                                <Button>
+                                <Button
+                                    onClick={() => window.open('/documentations')}
+                                >
                                     Documentation <span aria-hidden="true">→</span>
                                 </Button>
                             </div>

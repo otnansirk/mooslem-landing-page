@@ -12,11 +12,15 @@ export default function Contact() {
                     <p className="mt-5 text-lg/8 ">Got questions, feedback, or found a bug? Feel free to reach out—we’d love to hear from you and will respond as soon as we can. 😊</p>
                 </div>
                 <div className="flex gap-x-6 justify-center mt-10">
-                    <Button className=''>
+                    <Button
+                        onClick={() => window.open('mailto:iam.otnansirk@gmail.com')}
+                    >
                         <ChatBubbleLeftRightIcon aria-hidden="true" className="size-6" />
                         Gmail
                     </Button>
-                    <Button className=''>
+                    <Button
+                        onClick={() => window.open('https://github.com/otnansirk')}
+                    >
                         <HeartIcon aria-hidden="true" className="size-6" />
                         Github
                     </Button>
@@ -26,7 +30,9 @@ export default function Contact() {
                     <p className="mt-5 text-lg/8 ">{`Learn how to use all features of Mooslem Start Page with ease. Step-by-step guides are available to help you get the most out of the experience—whether you're a beginner or advanced user.`}</p>
                 </div>
                 <div className="flex gap-x-6 justify-center mt-10">
-                    <Button className=''>
+                    <Button
+                        onClick={() => window.open('/documentations')}
+                    >
                         <DocumentIcon aria-hidden="true" className="size-6" />
                         Documentation <span aria-hidden="true">→</span>
                     </Button>
