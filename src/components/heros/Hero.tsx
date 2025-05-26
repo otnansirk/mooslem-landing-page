@@ -5,17 +5,17 @@ import Button from '@/components/form/Button'
 import Image from 'next/image'
 
 const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'Docs', href: '#' },
-    { name: 'Contact', href: '#' },
-    { name: 'Donate', href: '#' },
+    { name: 'Home', href: '#home' },
+    { name: 'Docs', href: '/documentations' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'Donate', href: '#donate' },
 ]
 
 export default function Hero() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+        <div id="home" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
             <header className="absolute inset-x-0 top-0 z-50 container mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1">

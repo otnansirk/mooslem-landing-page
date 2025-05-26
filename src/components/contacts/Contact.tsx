@@ -4,7 +4,7 @@ import Button from '../form/Button'
 
 export default function Contact() {
     return (
-        <div className="isolate  text-white bg-cover bg-center bg-[#012230]" >
+        <div id="contact" className="isolate  text-white bg-cover bg-center bg-[#012230]" >
             <div className='backdrop-blur-xl px-6 py-24 sm:py-32 lg:px-8'>
 
                 <div className="mx-auto max-w-2xl sm:text-center">

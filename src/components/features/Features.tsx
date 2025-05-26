@@ -54,8 +54,8 @@ export default function Features() {
     return (
         <div id='features' className="bg-[#012230] py-24 text-red-white">
             <div className='max-w-2xl mx-auto space-y-3 px-6 mb-10'>
-                <h2 className='text-center text-3xl md:text-4xl'>Mooslem Start Page & Minimalist </h2>
-                <p className='text-center'>Mooslem Start Page is a minimalist Chrome extension that transforms your new tab into a calming, functional, and faith-centered experience.</p>
+                <h2 className='text-center text-4xl sm:text-5xl font-semibold'>Mooslem Start Page & Minimalist </h2>
+                <p className='text-center text-lg/8'>Mooslem Start Page is a minimalist Chrome extension that transforms your new tab into a calming, functional, and faith-centered experience.</p>
             </div>
 
             <div className="overflow-hidden py-16 sm:py-30">
@@ -63,7 +63,7 @@ export default function Features() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:pt-4 lg:pr-8 flex items-center order-2 sm:order-1">
                             <div className="lg:max-w-lg">
-                                <h2 className="mt-2 text-3xl tracking-tight text-pretty sm:text-4xl">
+                                <h2 className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty">
                                     Prayer Times
                                 </h2>
                                 <p className="mt-4 text-lg/8 text-gray-300">
@@ -87,7 +87,7 @@ export default function Features() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:ml-auto lg:pt-4 lg:pl-4 flex items-center">
                             <div className="lg:max-w-lg">
-                                <h2 className="mt-2 text-3xl tracking-tight text-pretty sm:text-4xl">
+                                <h2 className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty">
                                     Dynamic Background
                                 </h2>
                                 <p className="mt-4 text-lg/8 text-gray-300">
@@ -113,7 +113,7 @@ export default function Features() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:pt-4 lg:pr-8 flex items-center order-2 sm:order-1">
                             <div className="lg:max-w-lg">
-                                <h2 className="mt-2 text-3xl tracking-tight text-pretty sm:text-4xl">
+                                <h2 className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty">
                                     Customizable
                                 </h2>
                                 <p className="mt-4 text-lg/8 text-gray-300">
@@ -137,7 +137,7 @@ export default function Features() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                         <div className="col-span-2">
                             <h2 className="text-base/7 font-semibold text-gray-300">Everything you need</h2>
-                            <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-200 sm:text-5xl">
+                            <p className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty text-gray-200 sm:text-5xl">
                                 More Features, More Focus
                             </p>
                             <p className="mt-6 text-base/7 text-gray-300">
