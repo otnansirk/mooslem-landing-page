@@ -43,10 +43,10 @@ export default function Home() {
       </header>
 
       <div className="relative isolate px-6 lg:px-8 backdrop-blur-xl">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 h-[100vh]">
-          <div className="text-center">
+        <div className="flex justify-center items-center h-[100vh]">
+          <div className="text-center container mt-20">
             <h1 className='text-5xl font-bold'>Mooslem° <span className='text-3xl font-normal'>Startpage</span></h1>
-            <div className='h-auto my-14'>
+            <div className='h-auto my-9  max-w-2xl mx-auto'>
               <div className='bg-gray-800 h-5 rounded-t-md flex items-center gap-x-2 pl-2'>
                 <div className='bg-red-500 rounded-full h-3 w-3' />
                 <div className='bg-yellow-500 rounded-full h-3 w-3' />
@@ -55,6 +55,7 @@ export default function Home() {
               <iframe
                 className='w-full h-[250px] md:h-[350px] rounded-b-md'
                 src="https://www.youtube.com/embed/5LoA9sPiyww" title="Mooslem startpage - Prayer Time" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
               <div className="mt-10 w-[100%] h-full flex items-center justify-center gap-x-6">
                 <button className="flex items-center justify-center gap-[0.7em] max-w-[260px] px-5 py-2.5 rounded-[12px] border border-white/10 bg-white/10 text-inherit whitespace-nowrap box-border backdrop-blur-md hover:bg-white/20">
                   <Image src={'/chrome-icon.webp'} alt="Mooslem startpage" width={20} height={20} /> Install Now
