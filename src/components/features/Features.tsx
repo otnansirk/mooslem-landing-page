@@ -24,7 +24,7 @@ export default function Features() {
                         </div>
                         <Image
                             alt="Product screenshot"
-                            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                            src="/images/prayer.png"
                             width={832}
                             height={442}
                             className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 order-1 sm:order-2"
@@ -49,7 +49,7 @@ export default function Features() {
                         <div className="flex items-start justify-end order-first">
                             <Image
                                 alt="Product screenshot"
-                                src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                                src="/images/dynamic-bg.png"
                                 width={832}
                                 height={442}
                                 className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
