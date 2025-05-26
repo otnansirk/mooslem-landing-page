@@ -7,6 +7,7 @@ import Features from '@/components/features/Features'
 import Button from '@/components/form/Button'
 import Contact from '@/components/contacts/Contact'
 import Donate from '@/components/donates/Donate'
+import Footer from '@/components/footers/Footer'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -113,6 +114,7 @@ export default function Home() {
     <Features />
     <Donate />
     <Contact />
+    <Footer />
   </>
   )
 }

@@ -1,7 +1,6 @@
 import { ChatBubbleLeftRightIcon, HeartIcon } from '@heroicons/react/24/outline'
-import Button from '../form/Button'
-import { DocumentMagnifyingGlassIcon } from '@heroicons/react/16/solid'
 import { DocumentIcon } from '@heroicons/react/24/outline'
+import Button from '../form/Button'
 
 export default function Contact() {
     return (
