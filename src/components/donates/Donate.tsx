@@ -1,5 +1,6 @@
 import { BanknotesIcon } from '@heroicons/react/24/outline'
 import Button from '../form/Button'
+import Link from 'next/link'
 
 export default function Donate() {
     return (
@@ -11,14 +12,18 @@ export default function Donate() {
                     <p className="mt-5 text-lg/8 ">Mooslem Start Page is built with love and purpose. If you find it helpful, consider supporting its development with a small donation. Every bit helps keep the project alive and growing. ✨</p>
                 </div>
                 <div className="flex gap-x-6 justify-center mt-10">
-                    <Button onClick={() => window.open('https://ko-fi.com/otnansirk', '_blank')}>
-                        <BanknotesIcon aria-hidden="true" className="size-6" />
-                        Ko-Fi
-                    </Button>
-                    <Button onClick={() => window.open('https://github.com/sponsors/otnansirk', '_blank')}>
-                        <BanknotesIcon aria-hidden="true" className="size-6" />
-                        Github Sponsors
-                    </Button>
+                    <Link href="https://ko-fi.com/otnansirk" target="_blank">
+                        <Button>
+                            <BanknotesIcon aria-hidden="true" className="size-6" />
+                            Ko-Fi
+                        </Button>
+                    </Link>
+                    <Link href="https://github.com/sponsors/otnansirk" target="_blank">
+                        <Button>
+                            <BanknotesIcon aria-hidden="true" className="size-6" />
+                            Github Sponsors
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>

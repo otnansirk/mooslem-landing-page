@@ -93,11 +93,11 @@ export default function Hero() {
                                 >
                                     <Image src={'/chrome-icon.webp'} alt="Mooslem startpage" width={20} height={20} /> Install Now
                                 </Button>
-                                <Button
-                                    onClick={() => window.open('/documentations')}
-                                >
-                                    Documentation <span aria-hidden="true">→</span>
-                                </Button>
+                                <Link href="/docs">
+                                    <Button>
+                                        Documentation <span aria-hidden="true">→</span>
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>

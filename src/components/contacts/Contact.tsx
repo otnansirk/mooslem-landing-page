@@ -1,6 +1,7 @@
 import { ChatBubbleLeftRightIcon, HeartIcon } from '@heroicons/react/24/outline'
 import { DocumentIcon } from '@heroicons/react/24/outline'
 import Button from '../form/Button'
+import Link from 'next/link'
 
 export default function Contact() {
     return (
@@ -12,30 +13,30 @@ export default function Contact() {
                     <p className="mt-5 text-lg/8 ">Got questions, feedback, or found a bug? Feel free to reach out—we’d love to hear from you and will respond as soon as we can. 😊</p>
                 </div>
                 <div className="flex gap-x-6 justify-center mt-10">
-                    <Button
-                        onClick={() => window.open('mailto:iam.otnansirk@gmail.com')}
-                    >
-                        <ChatBubbleLeftRightIcon aria-hidden="true" className="size-6" />
-                        Gmail
-                    </Button>
-                    <Button
-                        onClick={() => window.open('https://github.com/otnansirk')}
-                    >
-                        <HeartIcon aria-hidden="true" className="size-6" />
-                        Github
-                    </Button>
+                    <Link href="mailto:iam.otnansirk@gmail.com">
+                        <Button>
+                            <ChatBubbleLeftRightIcon aria-hidden="true" className="size-6" />
+                            Gmail
+                        </Button>
+                    </Link>
+                    <Link href="https://github.com/otnansirk">
+                        <Button>
+                            <HeartIcon aria-hidden="true" className="size-6" />
+                            Github
+                        </Button>
+                    </Link>
                 </div>
                 <div className="mx-auto max-w-2xl sm:text-center mt-20">
                     <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Documentation</h2>
                     <p className="mt-5 text-lg/8 ">{`Learn how to use all features of Mooslem Start Page with ease. Step-by-step guides are available to help you get the most out of the experience—whether you're a beginner or advanced user.`}</p>
                 </div>
                 <div className="flex gap-x-6 justify-center mt-10">
-                    <Button
-                        onClick={() => window.open('/documentations')}
-                    >
-                        <DocumentIcon aria-hidden="true" className="size-6" />
-                        Documentation <span aria-hidden="true">→</span>
-                    </Button>
+                    <Link href="/docs">
+                        <Button>
+                            <DocumentIcon aria-hidden="true" className="size-6" />
+                            Documentation <span aria-hidden="true">→</span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
