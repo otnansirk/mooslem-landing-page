@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, PlayIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '@/components/form/Button'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,6 +14,7 @@ const navigation = [
 
 export default function Hero() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [onPlayVideo, setOnPlayVideo] = useState(false)
 
     return (
         <div id="home" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
@@ -83,9 +84,33 @@ export default function Hero() {
                                 <div className='bg-yellow-500 rounded-full h-3 w-3' />
                                 <div className='bg-green-500 rounded-full h-3 w-3' />
                             </div>
-                            <iframe
-                                className='w-full h-[250px] md:h-[350px] rounded-b-md'
-                                src="https://www.youtube.com/embed/5LoA9sPiyww" title="Mooslem startpage - Prayer Time" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+                            {
+                                onPlayVideo
+                                    ? (
+                                        <iframe
+                                            className='w-full h-[250px] md:h-[350px] rounded-b-md'
+                                            src="https://www.youtube.com/embed/5LoA9sPiyww?autoplay=1&mute=0"
+                                            title="Mooslem startpage - Prayer Time"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen />
+                                    )
+                                    : (
+                                        <div className='relative'>
+                                            <Image
+                                                src={'/images/hero.png'}
+                                                alt="Mooslem startpage"
+                                                width={800}
+                                                height={400}
+                                                className='w-full h-auto rounded-b-md'
+                                            />
+                                            <PlayIcon
+                                                onClick={() => setOnPlayVideo(!onPlayVideo)}
+                                                className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-white bg-gray-800 rounded-full p-3 cursor-pointer hover:bg-gray-700 transition-colors duration-300' />
+                                        </div>
+
+                                    )
+                            }
 
                             <div className="mt-10 w-[100%] h-full flex items-center justify-center gap-x-6">
                                 <Button
