@@ -18,8 +18,13 @@ export default function Hero() {
         <div id="home" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
             <header className="absolute inset-x-0 top-0 z-50 container mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-                    <div className="flex lg:flex-1"></div>
+                    <div className="flex lg:flex-1">
+                        <Button className='rounded-md px-2 py-0.5 h-0'>
+                            English
+                        </Button>
+                    </div>
                     <div className="flex lg:hidden">
+
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(true)}
@@ -41,7 +46,7 @@ export default function Hero() {
                 <div className={`${mobileMenuOpen ? ' lg:hidden' : 'hidden'}`} role="dialog" aria-modal="true">
                     {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
                     <div className="fixed inset-0 z-50"></div>
-                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-transparent backdrop-blur-[100px] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <span />
                             <button
@@ -56,7 +61,7 @@ export default function Hero() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <a key={item.name} href={item.href} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50">{item.name}</a>
+                                        <a key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50">{item.name}</a>
                                     ))}
                                 </div>
                             </div>
