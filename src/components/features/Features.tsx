@@ -1,59 +1,64 @@
 import { CheckIcon } from '@heroicons/react/24/outline'
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
 
 
 
+type Feature = {
+    name: string;
+    description: string;
+};
 
 export default function Features() {
+    const [features, setFeatures] = useState<Feature[]>([])
     const t = useTranslations('Features');
 
-    const features = [
-        {
-            name: t('feature_adhan-title'),
-            description: t('feature_adhan-description')
-        },
-        {
-            name: t('feature_clock-title'),
-            description: t('feature_clock-description')
-        },
-        {
-            name: t('feature_weather-title'),
-            description: t('feature_weather-description')
-        },
-        {
-            name: t('feature_background-title'),
-            description: t('feature_background-description')
-        },
-        {
-            name: t('feature_notes-title'),
-            description: t('feature_notes-description')
-        },
-        {
-            name: t('feature_customization-title'),
-            description: t('feature_customization-description')
-        },
-        {
-            name: t('feature_dark-mode-title'),
-            description: t('feature_dark-mode-description')
-        },
-        {
-            name: t('feature_quran-title'),
-            description: t('feature_quran-description')
-        },
-        {
-            name: t('feature_quotes-title'),
-            description: t('feature_quotes-description')
-        },
-        {
-            name: t('feature_language-title'),
-            describetion: t('feature_language-description')
-        },
-        {
-            name: t('feature_bookmarks-title'),
-            description: t('feature_bookmarks-description')
-        }
-    ]
+    useEffect(() => {
+
+        setFeatures([
+            {
+                name: t('feature_adhan-title'),
+                description: t('feature_adhan-description')
+            },
+            {
+                name: t('feature_clock-title'),
+                description: t('feature_clock-description')
+            },
+            {
+                name: t('feature_weather-title'),
+                description: t('feature_weather-description')
+            },
+            {
+                name: t('feature_greetings-title'),
+                description: t('feature_greetings-description')
+            },
+            {
+                name: t('feature_notes-title'),
+                description: t('feature_notes-description')
+            },
+            {
+                name: t('feature_darkmode-title'),
+                description: t('feature_darkmode-description')
+            },
+            {
+                name: t('feature_quran-title'),
+                description: t('feature_quran-description')
+            },
+            {
+                name: t('feature_quotes-title'),
+                description: t('feature_quotes-description')
+            },
+            {
+                name: t('feature_multilingual-title'),
+                description: t('feature_multilingual-description')
+            },
+            {
+                name: t('feature_quickaccess-title'),
+                description: t('feature_quickaccess-description')
+            }
+        ])
+    }, [t]);
 
     return (
         <div id='features' className="bg-[#012230] py-24 text-red-white">
