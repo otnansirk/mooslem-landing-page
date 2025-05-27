@@ -3,10 +3,11 @@ import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '@/components/form/Button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navigation = [
     { name: 'Home', href: '#home' },
-    { name: 'Docs', href: '/documentations' },
+    { name: 'Docs', href: '/docs' },
     { name: 'Contact', href: '#contact' },
     { name: 'Donate', href: '#donate' },
 ]
@@ -36,9 +37,9 @@ export default function Hero() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-200">
+                            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-200">
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </nav>
@@ -61,7 +62,9 @@ export default function Hero() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <a key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50">{item.name}</a>
+                                        <Link key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50">
+                                            {item.name}
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
