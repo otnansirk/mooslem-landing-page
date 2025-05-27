@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+
+import { NextIntlClientProvider } from 'next-intl';
+
 import "./globals.css";
 
 
@@ -28,7 +31,9 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} antialiased`}
       >
-        {children}
+        <NextIntlClientProvider>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

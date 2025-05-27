@@ -4,6 +4,8 @@ import { Bars3Icon, PlayIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '@/components/form/Button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLocale } from 'next-intl';
+
 
 const navigation = [
     { name: 'Home', href: '#home' },
@@ -13,6 +15,8 @@ const navigation = [
 ]
 
 export default function Hero() {
+    const locale = useLocale();
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [onPlayVideo, setOnPlayVideo] = useState(false)
 
@@ -20,10 +24,17 @@ export default function Hero() {
         <div id="home" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
             <header className="absolute inset-x-0 top-0 z-50 container mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-                    <div className="flex lg:flex-1">
-                        <Button className='rounded-md px-2 py-0.5 h-0'>
-                            English
-                        </Button>
+                    <div className="flex lg:flex-1 gap-2">
+                        <Link href="/en">
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'en' && 'bg-white text-gray-600 hover:bg-white/90'}`}>
+                                English
+                            </Button>
+                        </Link>
+                        <Link href="/id">
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'id' && 'bg-white text-gray-600 hover:bg-white/90'}`}>
+                                Indonesia
+                            </Button>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden">
 
