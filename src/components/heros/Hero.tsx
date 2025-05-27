@@ -26,12 +26,12 @@ export default function Hero() {
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1 gap-2">
                         <Link href="/en">
-                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'en' ? 'bg-white text-gray-600 hover:bg-white/90': 'bg-white/10 hover:bg-white/20'}`}>
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'en' ? 'bg-white text-gray-600 hover:bg-white/90' : 'bg-white/10 hover:bg-white/20'}`}>
                                 English
                             </Button>
                         </Link>
                         <Link href="/id">
-                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'id' ? 'bg-white text-gray-600 hover:bg-white/90': 'bg-white/10 hover:bg-white/20 '}`}>
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'id' ? 'bg-white text-gray-600 hover:bg-white/90' : 'bg-white/10 hover:bg-white/20 '}`}>
                                 Indonesia
                             </Button>
                         </Link>
@@ -113,6 +113,7 @@ export default function Hero() {
                                                 alt="Mooslem startpage"
                                                 width={800}
                                                 height={400}
+                                                priority
                                                 className='w-full h-auto rounded-b-md'
                                             />
                                             <PlayIcon
@@ -127,7 +128,12 @@ export default function Hero() {
                                 <Button
                                     onClick={() => window.open('https://chromewebstore.google.com/detail/mooslem%C2%B0-startpage/kmjfcnegnnljfjlolhpdngigkcgaphdo', '_blank')}
                                 >
-                                    <Image src={'/chrome-icon.webp'} alt="Mooslem startpage" width={20} height={20} /> Install Now
+                                    <Image
+                                        src={'/chrome-icon.webp'}
+                                        alt="Mooslem startpage"
+                                        width={20}
+                                        height={20}
+                                    /> Install Now
                                 </Button>
                                 <Link href="/docs">
                                     <Button>

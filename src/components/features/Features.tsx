@@ -74,9 +74,9 @@ export default function Features() {
                         <Image
                             alt="Product screenshot"
                             src="/images/prayer.png"
-                            width={832}
+                            width={632}
                             height={442}
-                            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 order-1 sm:order-2"
+                            className="w-auto max-w-none h-auto rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 order-1 sm:order-2"
                         />
                     </div>
                 </div>
@@ -99,9 +99,9 @@ export default function Features() {
                             <Image
                                 alt="Product screenshot"
                                 src="/images/background.png"
-                                width={832}
+                                width={632}
                                 height={442}
-                                className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
+                                className="w-auto h-auto max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
                             />
                         </div>
                     </div>
@@ -124,9 +124,9 @@ export default function Features() {
                         <Image
                             alt="Product screenshot"
                             src="/images/customizable.png"
-                            width={832}
+                            width={632}
                             height={442}
-                            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 order-1 sm:order-2"
+                            className="w-auto h-auto max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 order-1 sm:order-2"
                         />
                     </div>
                 </div>
@@ -137,7 +137,7 @@ export default function Features() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                         <div className="col-span-2">
                             <h2 className="text-base/7 font-semibold text-gray-300">Everything you need</h2>
-                            <p className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty text-gray-200 sm:text-5xl">
+                            <p className="mt-2 text-4xl font-semibold sm:text-5xl tracking-tight text-pretty text-gray-200">
                                 More Features, More Focus
                             </p>
                             <p className="mt-6 text-base/7 text-gray-300">
