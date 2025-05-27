@@ -4,6 +4,7 @@ import { Manrope } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
 
 
 const manrope = Manrope({
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${manrope.variable} antialiased`}
       >
         <NextIntlClientProvider>
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>
