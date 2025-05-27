@@ -1,35 +1,11 @@
-import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import "./globals.css";
+import { ReactNode } from 'react';
 
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope'
-})
-
-export const metadata: Metadata = {
-  title: "Mooslem° Startpage",
-  description: "Mooslem° Startpage - A customizable startpage for your browser. Balance work and faith with Mooslem°.",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-32x32.png",
-  }
+type Props = {
+  children: ReactNode;
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${manrope.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: Props) {
+  return children;
 }
