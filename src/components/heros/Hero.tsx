@@ -26,12 +26,12 @@ export default function Hero() {
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1 gap-2">
                         <Link href="/en">
-                            <Button className={`bg-white/10 text-inherit hover:bg-white/20 rounded-md px-2 py-0.5 h-0 ${locale === 'en' && 'bg-white text-gray-600 hover:bg-white/90'}`}>
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'en' ? 'bg-white text-gray-600 hover:bg-white/90': 'bg-white/10 hover:bg-white/20'}`}>
                                 English
                             </Button>
                         </Link>
                         <Link href="/id">
-                            <Button className={`bg-white/10 text-inherit hover:bg-white/20 rounded-md px-2 py-0.5 h-0 ${locale === 'id' && 'bg-white text-gray-600 hover:bg-white/90'}`}>
+                            <Button className={`rounded-md px-2 py-0.5 h-0 ${locale === 'id' ? 'bg-white text-gray-600 hover:bg-white/90': 'bg-white/10 hover:bg-white/20 '}`}>
                                 Indonesia
                             </Button>
                         </Link>
