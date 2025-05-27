@@ -2,9 +2,69 @@
 // See: https://next-intl.dev/docs/workflows/typescript#messages-arguments
 
 declare const messages: {
-    "Home": {
-        "title": "Home",
-        "description": "Welcome to the home page of our application. Here you can find the latest updates and features."
+    "Navigation": {
+        "home": "Home",
+        "documentation": "Docs",
+        "contact": "Contact",
+        "donate": "Donate"
+    },
+    "Hero": {
+        "cta_install-now": "Install Now",
+        "cta_documentation": "Documentation"
+    },
+    "Features": {
+        "title": "Mooslem° Startpage & Minimalist",
+        "description": "Mooslem° Startpage is a minimalist Chrome extension that transforms your new tab into a calming, functional, and faith-centered experience.",
+        "feature_prayer-title": "Prayer Times",
+        "feature_prayer-description": "Mooslem° Startpage automatically shows daily prayer times based on your location—with Adhan notifications to help you stay on track, even during your busiest days.",
+        "feature_bg-dynamic-title": "Dynamic Background",
+        "feature_bg-dynamic-description": "Mooslem° Startpage brings a new aesthetic with every click—featuring dynamic 4K backgrounds that elevate your workspace, help you stay focused, and add a calming visual experience to your daily flow.",
+        "feature_customizable-title": "Customizable",
+        "feature_customizable-description": "Mooslem° Startpage gives you full control—customize clock format, weather settings, notifications, and background visuals to create a workspace that fits both your productivity and your faith.",
+        "more_label": "Everything you need",
+        "more_title": "More Features, More Focus",
+        "more_description": "Mooslem° Startpage is designed to enhance your daily routine with features that keep you organized, focused, and connected to your faith. From prayer times to dynamic backgrounds, every element is crafted to support your productivity and spiritual journey.",
+        "feature_adhan-title": "Adhan Notifications",
+        "feature_adhan-description": "Get notified with Adhan sound before the next prayer time.",
+        "feature_clock-title": "Customizable Clock",
+        "feature_clock-description": "A clean and customizable clock that helps you keep track of time while staying productive.",
+        "feature_weather-title": "Weather",
+        "feature_weather-description": "Real-time weather updates tailored to your current location.",
+        "feature_greetings-title": "Greetings",
+        "feature_greetings-description": "Personalized greetings that uplift your mood and set the tone for your day.",
+        "feature_notes-title": "Notes",
+        "feature_notes-description": "A simple space to jot down reminders, tasks, or reflections directly on your start page.",
+        "feature_notifications-title": "Customizable Notifications",
+        "feature_notifications-description": "Enable or disable Adhan and prayer alerts based on your preference.",
+        "feature_darkmode-title": "Dark Mode (Coming Soon)",
+        "feature_darkmode-description": "A sleek, eye-friendly dark theme to reduce strain during nighttime use.",
+        "feature_quran-title": "Al-Quran Integration (Coming Soon)",
+        "feature_quran-description": "Read and reflect on the Quran directly from your new tab page.",
+        "feature_quotes-title": "Inspirational Islamic Quotes (Coming Soon)",
+        "feature_quotes-description": "Daily Islamic quotes to inspire your soul and keep you grounded.",
+        "feature_multilingual-title": "Multilingual Support (Coming Soon)",
+        "feature_multilingual-description": "Experience Mooslem° Startpage in your preferred language.",
+        "feature_quickaccess-title": "Quick Access Links (Coming Soon)",
+        "feature_quickaccess-description": "Access your favorite websites and Islamic resources with one click."
+    },
+    "Donate": {
+        "title": "Donate",
+        "description": "Mooslem° Startpage is built with love and purpose. If you find it helpful, consider supporting its development with a small donation. Every bit helps keep the project alive and growing. ✨"
+    },
+    "Contact": {
+        "title": "Contact",
+        "description": "Got questions, feedback, or found a bug? Feel free to reach out—we’d love to hear from you and will respond as soon as we can. 😊"
+    },
+    "Documentation": {
+        "title": "Documentation",
+        "description": "Learn how to use all features of Mooslem° Startpage with ease. Step-by-step guides are available to help you get the most out of the experience—whether you're a beginner or advanced user.",
+        "cta_documentation": "Documentation"
+    },
+    "Footer": {
+        "privacy-policy": "Privacy Policy",
+        "terms-of-service": "Terms of Service",
+        "version": "Version",
+        "copyright": "Lovingly crafted by otnansirk in Indonesia."
     }
 };
 export default messages;

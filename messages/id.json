@@ -1,6 +1,68 @@
 {
-    "Home": {
-        "title": "Home",
-        "description": "Welcome to the home page of our application. Here you can find the latest updates and features."
+    "Navigation": {
+        "home": "Beranda",
+        "documentation": "Panduan",
+        "contact": "Kontak",
+        "donate": "Donasi"
+    },
+    "Hero": {
+        "cta_install-now": "Pasang Sekarang",
+        "cta_documentation": "Lihat Panduan"
+    },
+    "Features": {
+        "title": "Mooslem° Startpage & Minimalis",
+        "description": "Mooslem° Startpage adalah ekstensi Chrome yang menjadikan tab baru kamu lebih tenang, rapi, dan penuh makna — semua terhubung dengan rutinitas dan keimananmu.",
+        "feature_prayer-title": "Waktu Sholat",
+        "feature_prayer-description": "Secara otomatis menampilkan jadwal sholat harian sesuai lokasi kamu, lengkap dengan notifikasi Adzan agar kamu nggak ketinggalan ibadah di tengah kesibukan.",
+        "feature_bg-dynamic-title": "Latar Dinamis",
+        "feature_bg-dynamic-description": "Setiap kali buka tab baru, kamu disuguhkan tampilan 4K yang selalu berbeda — bikin semangat, tenangin pikiran, dan bantu kamu tetap fokus.",
+        "feature_customizable-title": "Bisa Disesuaikan",
+        "feature_customizable-description": "Atur sendiri format jam, info cuaca, notifikasi, dan latar belakang sesuai gaya kamu. Semuanya bisa kamu sesuaikan biar makin nyaman dan produktif.",
+        "feature_adhan-title": "Notifikasi Adzan",
+        "feature_adhan-description": "Dapatkan pengingat suara Adzan sebelum waktu sholat tiba, biar ibadah nggak kelewat.",
+        "feature_clock-title": "Jam yang Bisa Diatur",
+        "feature_clock-description": "Tampilan jam yang bersih dan simpel, bisa diatur sesukamu untuk bantu atur waktu dengan lebih baik.",
+        "feature_weather-title": "Info Cuaca",
+        "feature_weather-description": "Update cuaca real-time berdasarkan lokasi kamu — langsung dari halaman awal.",
+        "feature_greetings-title": "Ucapan Selamat",
+        "feature_greetings-description": "Sambutan hangat dan personal yang bikin hari kamu jadi lebih semangat dan positif.",
+        "feature_notes-title": "Catatan",
+        "feature_notes-description": "Tulis cepat pengingat, tugas, atau refleksi harian langsung dari tab baru kamu.",
+        "feature_notifications-title": "Notifikasi Bisa Diatur",
+        "feature_notifications-description": "Aktifkan atau nonaktifkan notifikasi Adzan dan pengingat sholat sesuai keinginanmu.",
+        "feature_darkmode-title": "Mode Gelap (Segera Hadir)",
+        "feature_darkmode-description": "Tampilan gelap yang nyaman di mata, cocok buat penggunaan di malam hari.",
+        "feature_quran-title": "Baca Al-Qur'an (Segera Hadir)",
+        "feature_quran-description": "Baca dan renungkan ayat suci Al-Qur’an langsung dari halaman tab kamu.",
+        "feature_quotes-title": "Kutipan Inspiratif (Segera Hadir)",
+        "feature_quotes-description": "Kutipan Islami harian yang menyentuh hati dan jadi pengingat kebaikan.",
+        "feature_multilingual-title": "Dukungan Banyak Bahasa (Segera Hadir)",
+        "feature_multilingual-description": "Gunakan Mooslem° Startpage dalam bahasa pilihanmu.",
+        "feature_quickaccess-title": "Akses Cepat (Segera Hadir)",
+        "feature_quickaccess-description": "Buka situs favorit dan sumber Islami hanya dengan satu klik.",
+        "more_label": "Semua yang kamu butuhkan",
+        "more_title": "Fitur Lengkap, Fokus Maksimal",
+        "more_description": "Mooslem° Startpage dirancang untuk bantu kamu lebih fokus, produktif, dan tetap terhubung dengan keimanan. Mulai dari jadwal sholat hingga latar belakang dinamis — semuanya hadir untuk mendukung hari-harimu.",
+        "more_": "",
+        "more_labels": "Semua yang kamu butuhkan"
+    },
+    "Donate": {
+        "title": "Dukung Kami",
+        "description": "Mooslem° Startpage dibuat dengan cinta dan niat baik. Kalau kamu merasa ini bermanfaat, yuk bantu pengembangannya lewat donasi kecil. Setiap dukungan sangat berarti untuk menjaga proyek ini terus berjalan. ✨"
+    },
+    "Contact": {
+        "title": "Hubungi Kami",
+        "description": "Punya pertanyaan, masukan, atau nemu bug? Silakan hubungi kami — kami senang mendengarnya dan akan merespon secepat mungkin. 😊"
+    },
+    "Documentation": {
+        "title": "Panduan Lengkap",
+        "description": "Pelajari semua fitur Mooslem° Startpage dengan mudah. Panduan langkah demi langkah tersedia agar kamu bisa memanfaatkan semua fitur — baik untuk pemula maupun pengguna berpengalaman.",
+        "cta_documentation": "Lihat Panduan"
+    },
+    "Footer": {
+        "privacy-policy": "Kebijakan Privasi",
+        "terms-of-service": "Syarat & Ketentuan",
+        "version": "Versi",
+        "copyright": "Dibuat dengan cinta oleh otnansirk di Indonesia."
     }
 }

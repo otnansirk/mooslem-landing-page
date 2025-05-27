@@ -1,10 +1,17 @@
-const navigation = {
-    main: [
-        { name: 'Privacy Policy', href: '#' }
-    ]
-}
+import { useTranslations } from "next-intl"
+
 
 export default function Footer() {
+
+    const t = useTranslations('Footer');
+
+
+    const navigation = {
+        main: [
+            { name: t('privacy-policy'), href: '#' }
+        ]
+    }
+
     return (
         <footer className="bg-gray-900">
             <div className="mx-auto max-w-7xl overflow-hidden px-3 py-5 lg:px-8">
@@ -16,7 +23,7 @@ export default function Footer() {
                     ))}
                 </nav>
                 <div className="mt-10 flex justify-center">
-                    Lovingly crafted by otnansirk in Indonesia.
+                    {t('copyright')}
                 </div>
                 <p className="mt-5 text-center text-sm/6 text-gray-400">&copy; 2025 - {(new Date()).getFullYear()} Mooslem.</p>
             </div>

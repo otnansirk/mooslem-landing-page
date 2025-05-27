@@ -4,21 +4,24 @@ import { Bars3Icon, PlayIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Button from '@/components/form/Button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
-
-const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'Docs', href: '/docs' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Donate', href: '#donate' },
-]
 
 export default function Hero() {
     const locale = useLocale();
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [onPlayVideo, setOnPlayVideo] = useState(false)
+
+    const tNav = useTranslations('Navigation');
+    const tHero = useTranslations('Hero');
+
+    const navigation = [
+        { name: tNav('home'), href: '#home' },
+        { name: tNav('documentation'), href: '/docs' },
+        { name: tNav('contact'), href: '#contact' },
+        { name: tNav('donate'), href: '#donate' },
+    ]
 
     return (
         <div id="home" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494879540385-bc170b0878a7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
@@ -133,11 +136,11 @@ export default function Hero() {
                                         alt="Mooslem startpage"
                                         width={20}
                                         height={20}
-                                    /> Install Now
+                                    /> {tHero('cta_install-now')}
                                 </Button>
                                 <Link href="/docs">
                                     <Button>
-                                        Documentation <span aria-hidden="true">→</span>
+                                        {tHero('cta_documentation')} <span aria-hidden="true">→</span>
                                     </Button>
                                 </Link>
                             </div>
