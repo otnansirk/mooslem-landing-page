@@ -39,10 +39,11 @@ type RichTextItem = [string, string[][]?];
 function parseRichText(richText: RichTextItem[]): string {
     return richText.map(([text, styles]) => {
         if (styles && styles.some(styleArr => styleArr.includes('b'))) {
-            // kalau ada style 'b', wrap dengan **
             return `<strong>${text}</strong>`;
         }
-        // tambahkan style lain jika perlu, misal italic, underline, dll
+        if (styles && styles.some(styleArr => styleArr.includes('i'))) {
+            return `<em>${text}</em>`;
+        }
         return text;
     }).join('');
 }
@@ -56,7 +57,6 @@ export const notionFormatFromRaw = (rawData: RawData): FormattedOutput => {
     }
 
     const contentIds = mainPage.value.content;
-    console.log("RAAA", rawData);
 
     const blocks: FormattedBlock[] = contentIds
         .map((id) => {
@@ -64,7 +64,24 @@ export const notionFormatFromRaw = (rawData: RawData): FormattedOutput => {
             if (!block) return null;
 
             const flattenedProperties: Record<string, string> = {};
-            if (block.properties) {
+
+            if (block.type === "bulleted_list" && block.content) {
+                const childrenHTML = block.content
+                    .map(childId => {
+                        const child = rawData[childId]?.value;
+                        if (!child || !child.properties?.title) return '';
+                        return `<li>${parseRichText(child.properties.title as RichTextItem[])}</li>`;
+                    })
+                    .join('');
+
+                flattenedProperties["children"] = `${childrenHTML}`;
+
+                // Optionally: parse the bullet list title itself too
+                if (block.properties?.title) {
+                    flattenedProperties["title"] = parseRichText(block.properties.title as RichTextItem[]);
+                }
+
+            } else if (block.properties) {
                 for (const [key, value] of Object.entries(block.properties)) {
                     if (key === 'title' && Array.isArray(value)) {
                         flattenedProperties[key] = parseRichText(value as RichTextItem[]);
