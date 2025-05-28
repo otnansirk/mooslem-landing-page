@@ -3,14 +3,14 @@ import NotionRender from "@/components/docs/NotionRender";
 import { getDocsNavigationByLocale } from "@/utils/docs-navigation";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
     locale: string;
-  };
+  }>;
 }
 
 const DocsDetail = async ({ params }: PageProps) => {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
 
   const docs = getDocsNavigationByLocale(locale ?? "en"); // ← if async
   const pageId = docs.find(item => item.href === `/docs/${slug}`)?.pageId ?? "";
