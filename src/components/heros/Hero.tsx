@@ -69,7 +69,9 @@ export default function Hero() {
                                 </Button>
                                 <Link href="/docs">
                                     <Button>
-                                        {tHero('cta_documentation')} <span aria-hidden="true">→</span>
+                                        <div className='flex items-center gap-2'>
+                                            {tHero('cta_documentation')} <span aria-hidden="true">→</span>
+                                        </div>
                                     </Button>
                                 </Link>
                             </div>
