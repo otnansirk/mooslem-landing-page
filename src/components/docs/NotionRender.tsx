@@ -28,15 +28,15 @@ export const RenderBlocks: React.FC<{ block: FormattedBlock, customPageUrl?: () 
         case "text":
             return <p className="text-md md:text-lg my-4" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "header":
-            return <h1 className="text-3xl font-bold my-4">{properties.title}</h1>;
+            return <h1 className="text-3xl font-bold my-4" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "sub_header":
-            return <h2 className="text-2xl font-semibold my-4">{properties.title}</h2>;
+            return <h2 className="text-2xl font-semibold my-4" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "sub_sub_header":
-            return <h3 className="text-xl font-medium my-4">{properties.title}</h3>;
+            return <h3 className="text-xl font-medium my-4" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "bulleted_list":
-            return <li className="list-disc ml-6 my-1">{properties.title}</li>;
+            return <li className="list-disc ml-6 my-1" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "numbered_list":
-            return <li className="list-decimal ml-6 my-1">{properties.title}</li>;
+            return <li className="list-decimal ml-6 my-1" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "page":
             return <a href={`notion/${id}`} className="list-decimal ml-6">{properties.title}</a>;
         case "image":
