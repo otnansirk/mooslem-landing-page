@@ -1,16 +1,25 @@
 import NotionLayout from "@/components/docs/NotionLayout";
-import NotionRender from "@/components/docs/NotionRender"
+import NotionRender from "@/components/docs/NotionRender";
 import { getDocsNavigationByLocale } from "@/utils/docs-navigation";
 
-const DocsDetail = ({ params }: { params: { slug: string, locale: string } }) => {
-    const { slug, locale } = params;
-    const pageId = getDocsNavigationByLocale(locale ?? "en").find(item => item.href === `/docs/${slug}`)?.pageId ?? "";
-
-    return (
-        <NotionLayout>
-            <NotionRender pageId={pageId} />
-        </NotionLayout>
-    )
+interface PageProps {
+  params: {
+    slug: string;
+    locale: string;
+  };
 }
 
-export default DocsDetail
+const DocsDetail = async ({ params }: PageProps) => {
+  const { slug, locale } = params;
+
+  const docs = await getDocsNavigationByLocale(locale ?? "en"); // ← if async
+  const pageId = docs.find(item => item.href === `/docs/${slug}`)?.pageId ?? "";
+
+  return (
+    <NotionLayout>
+      <NotionRender pageId={pageId} />
+    </NotionLayout>
+  );
+};
+
+export default DocsDetail;
