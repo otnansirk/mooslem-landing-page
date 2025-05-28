@@ -1,18 +1,26 @@
-import { FormattedBlock, notionFormatFromRaw } from "@/utils/notion";
+"use client";
+
+import { FormattedBlock, FormattedOutput, notionFormatFromRaw } from "@/utils/notion";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 type NotionRenderType = {
     pageId: string;
 }
 
-const NotionRender = async (props: NotionRenderType) => {
+const NotionRender = (props: NotionRenderType) => {
+    const [content, setContent] = useState<FormattedOutput>();
 
-    const response = await fetch("https://notion-api.splitbee.io/v1/page/" + props.pageId)
-    const data = await response.json();
-    const content = notionFormatFromRaw(data);
+    useEffect(() => {
+        (async () => {
+            const response = await fetch("https://notion-api.splitbee.io/v1/page/" + props.pageId)
+            const data = await response.json();
+            setContent(notionFormatFromRaw(data));
+        })()
+    }, [props.pageId]);
 
     return <>
-        {content.blocks.map((block) => (
+        {content?.blocks.map((block) => (
             <RenderBlocks
                 key={block.id}
                 block={block}
@@ -21,8 +29,14 @@ const NotionRender = async (props: NotionRenderType) => {
     </>
 };
 
-export const RenderBlocks: React.FC<{ block: FormattedBlock, customPageUrl?: () => void }> = async ({ block }) => {
-    const { type, properties, id } = block;
+export const RenderBlocks: React.FC<{ block: FormattedBlock, customPageUrl?: () => void }> = ({ block }) => {
+    const { type, properties, id, format } = block;
+    const [showIframe, setShowIframe] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setShowIframe(true), 500);
+        return () => clearTimeout(timer); // Clean up
+    }, []);
 
     switch (type) {
         case "text":
@@ -39,6 +53,22 @@ export const RenderBlocks: React.FC<{ block: FormattedBlock, customPageUrl?: () 
             return <li className="list-decimal ml-6 my-1" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "page":
             return <a href={`notion/${id}`} className="list-decimal ml-6">{properties.title}</a>;
+        case "divider":
+            return <hr className="border-gray-600 my-5" />;
+        case "video":
+            return <div className="relative w-full my-8" style={{ paddingTop: `54.5%` }}>
+                {
+                    showIframe &&
+                    <iframe
+                        src={format?.display_source as string || ""}
+                        title={format?.link_title as string || ""}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full rounded-lg shadow"
+                    />
+                }
+            </div>
         case "image":
             const src = properties.source;
 
