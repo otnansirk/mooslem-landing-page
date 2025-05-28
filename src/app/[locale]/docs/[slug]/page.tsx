@@ -12,7 +12,7 @@ interface PageProps {
 const DocsDetail = async ({ params }: PageProps) => {
   const { slug, locale } = params;
 
-  const docs = await getDocsNavigationByLocale(locale ?? "en"); // ← if async
+  const docs = getDocsNavigationByLocale(locale ?? "en"); // ← if async
   const pageId = docs.find(item => item.href === `/docs/${slug}`)?.pageId ?? "";
 
   return (
