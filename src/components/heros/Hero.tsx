@@ -56,7 +56,7 @@ export default function Hero() {
                                     )
                             }
 
-                            <div className="mt-10 w-[100%] h-full flex items-center justify-center gap-x-6">
+                            <div className="mt-10 w-[100%] h-full flex items-center justify-center gap-x-6 gap-y-3 flex-wrap">
                                 <Button
                                     onClick={() => window.open('https://chromewebstore.google.com/detail/mooslem%C2%B0-startpage/kmjfcnegnnljfjlolhpdngigkcgaphdo', '_blank')}
                                 >
