@@ -1,10 +1,13 @@
 "use client"
 
 import { getDocsNavigationByLocale } from "@/utils/docs-navigation";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+
 
 const NotionLayout = ({ children }: { children: React.ReactNode }) => {
+    const t = useTranslations('Documentation');
 
     const { slug, locale }: { slug: string, locale: string } = useParams()
     const background = "https://images.unsplash.com/photo-1558617862-7a96a08f00c7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -13,13 +16,14 @@ const NotionLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="bg-[#012230]">
             <div className="relative bg-center min-h-64 max-h-64" style={{ backgroundImage: `url('${background}')` }}>
-                <div className="backdrop-blur-0 backdrop-brightness-75 absolute w-full h-full flex items-end justify-center">
+                <div className="backdrop-blur-sm backdrop-brightness-75 absolute w-full h-full flex items-end justify-center">
+                    <h1 className="mb-16 text-4xl font-bold">{t('title')}</h1>
                 </div>
             </div>
             <div className="max-w-6xl mx-auto text-gray-800 px-6 lg:px-8">
                 <div className="bg-wite min-h-screen flex flex-col lg:flex-row p-6 lg:p-8">
 
-                    <aside className="lg:w-1/4 mb-10 lg:mb-0">
+                    <aside className="lg:w-1/4 mb-4 lg:mb-0">
                         <div className="py-6 rounded-xl shadow-sm text-gray-300 flex gap-2 flex-wrap">
                             {NAVIGATION.map(item => (
                                 <Link

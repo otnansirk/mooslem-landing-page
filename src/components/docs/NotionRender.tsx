@@ -48,10 +48,10 @@ export const RenderBlocks: React.FC<{ block: FormattedBlock, customPageUrl?: () 
         case "sub_sub_header":
             return <h3 className="text-xl font-medium my-4" dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />;
         case "bulleted_list":
-            return <ul className="list-disc ml-6 my-1">
+            return <ul className="list-disc ml-6 my-1 text-md">
                 <li>
                     <div dangerouslySetInnerHTML={{ __html: properties?.title ?? "" }} />
-                    <ul className="list-inside ml-4" dangerouslySetInnerHTML={{ __html: properties?.children }} />
+                    <ul className="list-inside" dangerouslySetInnerHTML={{ __html: properties?.children }} />
                 </li>
             </ul>
                 ;
