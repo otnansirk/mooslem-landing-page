@@ -10,6 +10,7 @@ interface BlockValue {
     };
     parent_id: string;
     parent_table: string;
+    format: Record<string, string | number>; // Format can be any additional properties, adjust as needed
 }
 
 interface RawData {
@@ -24,9 +25,10 @@ export interface FormattedBlock {
     properties: Record<string, string>;
     parent_id: string;
     parent_table: string;
+    format: Record<string, string | number>; // Format can be any additional properties, adjust as needed
 }
 
-interface FormattedOutput {
+export interface FormattedOutput {
     pageTitle: string;
     blocks: FormattedBlock[];
 }
@@ -54,6 +56,7 @@ export const notionFormatFromRaw = (rawData: RawData): FormattedOutput => {
     }
 
     const contentIds = mainPage.value.content;
+    console.log("RAAA", rawData);
 
     const blocks: FormattedBlock[] = contentIds
         .map((id) => {
@@ -79,7 +82,8 @@ export const notionFormatFromRaw = (rawData: RawData): FormattedOutput => {
                 type: block.type,
                 properties: flattenedProperties,
                 parent_id: block.parent_id,
-                parent_table: block.parent_table
+                parent_table: block.parent_table,
+                format: block.format
             };
         })
         .filter((block): block is FormattedBlock => block !== null);
