@@ -26,6 +26,12 @@ export default function Donate() {
                             Github Sponsors
                         </Button>
                     </Link>
+                    <Link href="https://lynk.id/pakotnan" target="_blank">
+                        <Button>
+                            <BanknotesIcon aria-hidden="true" className="size-6" />
+                            Lynk.id
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
