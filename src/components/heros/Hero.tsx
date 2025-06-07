@@ -32,7 +32,7 @@ export default function Hero() {
                                     ? (
                                         <iframe
                                             className='w-full h-[250px] md:h-[350px] rounded-b-md'
-                                            src="https://www.youtube.com/embed/5LoA9sPiyww?autoplay=1&mute=0"
+                                            src="https://www.youtube.com/embed/NmcCkPw9jnk?autoplay=1&mute=0"
                                             title="Mooslem startpage - Prayer Time"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerPolicy="strict-origin-when-cross-origin"
