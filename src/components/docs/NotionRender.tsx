@@ -13,7 +13,7 @@ const NotionRender = (props: NotionRenderType) => {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch("https://notion-api.splitbee.io/v1/page/" + props.pageId)
+            const response = await fetch("/api/notion?pageId=" + props.pageId)
             const data = await response.json();
             setContent(notionFormatFromRaw(data));
         })()
